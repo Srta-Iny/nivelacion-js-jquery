@@ -29,6 +29,12 @@ function printNews(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+
+	$.each( recipesArray, function( i, valor){
+  		if(valor.highlighted === true){
+  			renderRecipe(valor);
+  		}  	
+	});
 }
 
 /*
@@ -39,6 +45,8 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+	
+
 }
 
 

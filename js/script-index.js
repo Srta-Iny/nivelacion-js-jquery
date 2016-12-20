@@ -45,7 +45,17 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
-	
+	var a = $('<a class="item-recipe" href="#"></a>');
+	var span = $('<span class="attribution"></span>');
+	var span1 = $('<span class="title-recipe">'+ recipe.title +'</span>');
+	var span2 = $(' <span class="metadata-recipe"></span>');
+	var span3 = $('<span class="author-recipe">'+ recipe.source.name+'</span>');
+	var span4 = $('<span class="bookmarks-recipe"><span class="icon-bookmark"></span></span>');
+	var img = $('<img src="img/recipes/320x350/spring-fromage-fort.jpg" alt="">');
+	span2.append(span3, span4);
+	span.append(span1 , span2);
+	a.append(span, img);
+	$('.list-recipes').append(a);
 
 }
 

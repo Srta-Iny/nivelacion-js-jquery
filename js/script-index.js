@@ -1,5 +1,16 @@
 $(document).ready( function(){
 
+	//obteniendo ubicacion actual 
+	var ubicacion= window.location.pathname.split("/");
+	var url = ubicacion[ubicacion.length-1];
+
+	// comparar ubicacion
+	if(url === 'index.html'){
+		$('.js-back').css({ display: 'none' });
+	}else{
+		$('.js-menu').css({ display: 'none'});
+	}
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
